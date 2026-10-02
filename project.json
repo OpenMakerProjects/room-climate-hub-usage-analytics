@@ -1,0 +1,21 @@
+{
+  "id": 7,
+  "title": "Room Climate Hub Usage Analytics",
+  "repository_slug": "room-climate-hub-usage-analytics",
+  "category": "Smart Home",
+  "platform": "Arduino Nano 33 IoT",
+  "platform_family": "arduino",
+  "difficulty": "Intermediate",
+  "estimated_hours": 28,
+  "connectivity": "MQTT",
+  "components": [
+    "servo motor",
+    "microphone module",
+    "relay module"
+  ],
+  "scope": "Build a smart home prototype that uses servo motor, microphone module, relay module to summarize daily and weekly usage. Include setup instructions, a circuit diagram, tested firmware, and sample output.",
+  "key_deliverable": "Usage Analytics demonstration with repeatable test steps",
+  "mode": "data_logger",
+  "entrypoint": "firmware/room-climate-hub-usage-analytics/room-climate-hub-usage-analytics.ino",
+  "roadmap_source": "openmaker-2100-project-roadmap.xlsx"
+}
