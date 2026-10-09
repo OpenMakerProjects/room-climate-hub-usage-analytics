@@ -1,22 +1,2 @@
-# Test plan
-
-## Static checks
-
-1. Run `python tools/validate.py`.
-2. Confirm the firmware or application starts without missing configuration.
-3. Compare the assembled wiring with `docs/wiring.md` and component datasheets.
-
-## Functional checks
-
-1. Start with simulated or disconnected actuators.
-2. Feed low, nominal, and high readings into the controller.
-3. Confirm the **data logger** behavior matches the serial or console output.
-4. Disconnect one sensor and confirm the system enters a safe state.
-5. Restore the sensor and verify recovery requires an intentional acknowledgement for latched safety modes.
-
-## Acceptance criteria
-
-- Telemetry includes a timestamp, state, input readings, and output state.
-- Invalid readings do not command an actuator on.
-- The output changes only after the configured threshold and debounce checks pass.
-- The steps in the README reproduce the demonstration.
+# Repeatable test plan
+Run host analytics_test.cpp for transition counting, day/week splits and 32-bit timer-wrap accounting. Run Python PNG transport corruption tests and completion validator. Build Nano 33 IoT via pio run. Hardware tests NOT performed: separately verify A0 voltage, external load supply, relay default off, servo 0/90 degrees, sound threshold, MQTT on/off, Wi-Fi disconnect, supply brownout and reboot counter reset. Use only a fused 5 V lamp.

@@ -1,12 +1,1 @@
-{
-  "project_id": 7,
-  "timestamp": "2026-01-01T00:00:00Z",
-  "state": "normal",
-  "score": 0.42,
-  "output": false,
-  "values": [
-    0.38,
-    0.43,
-    0.45
-  ]
-}
+{"project_id":7,"day":0,"week":0,"daily_ms":2000,"weekly_ms":2000,"events":1,"sound_peak_to_peak":160,"active":true}
