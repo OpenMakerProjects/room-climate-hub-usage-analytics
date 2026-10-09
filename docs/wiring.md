@@ -1,17 +1,2 @@
-# Wiring guide
-
-This is a low-voltage prototype wiring plan for **Room Climate Hub Usage Analytics**. Confirm every module's datasheet because breakout-board pinouts vary.
-
-| Component | Suggested pin | Role | Check |
-| --- | --- | --- | --- |
-| servo motor | 9 | Digital I/O | Confirm the module voltage and pinout before power-up. |
-| microphone module | A0 | Analog input | Confirm the module voltage and pinout before power-up. |
-| relay module | 2 | Digital I/O | Confirm the module voltage and pinout before power-up. |
-| Status output | LED_BUILTIN | Output | Use a resistor when an external LED is fitted. |
-
-## Power
-
-- Use a regulated supply sized for the selected modules.
-- Join grounds unless an interface is explicitly isolated.
-- Do not connect mains voltage directly to a development board.
-- Add a fuse, emergency stop, and certified isolation where a real actuator can create risk.
+# Exact wiring
+Nano 33 IoT: 3.3 V logic. Microphone breakout VCC -> 3V3, GND -> GND, OUT -> A0 (0–3.3 V). Servo signal -> D9; servo power -> external regulated 5 V; ground -> common GND. Active-high 3.3 V-compatible relay IN -> D5, VCC -> module-rated external 5 V, GND -> common GND. Relay COM -> fused external 5 V; NO -> 5 V lamp +; lamp - -> GND. 10 kohm relay IN-to-GND pull-down. 470 uF capacitor across servo supply, positive to +5 V. Never power servo/relay from 3V3; never connect mains.
